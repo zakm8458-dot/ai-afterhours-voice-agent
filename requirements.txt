@@ -1,0 +1,2 @@
+pipecat
+coqui-tts
