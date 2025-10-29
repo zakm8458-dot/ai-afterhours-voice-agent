@@ -1,2 +1,2 @@
 pipecat
-coqui-tts
+gtts

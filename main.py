@@ -1,34 +1,17 @@
 # main.py
-# After-hours AI voice agent using Pipecat framework
-
-from pipecat import Pipeline
-from pipecat.sources.microphone import MicrophoneSource
-from pipecat.sinks.speaker import SpeakerSink
-from pipecat.llms import OpenAI
-from pipecat.stt import WhisperASR
-from pipecat.tts import CoquiTTS
+# Placeholder for AI after-hours voice agent without heavy dependencies.
 
 
 def main():
-    """Run a simple voice assistant that listens to the user, uses a language model to generate a response, and speaks back."""
-    # Initialize the speech-to-text engine (Whisper via Groq or local install)
-    stt = WhisperASR()
-
-    # Initialize the language model. Replace with a free/open-source model provider or local model.
-    llm = OpenAI(model="gpt-3.5-turbo")
-
-    # Initialize the text-to-speech engine (Coqui TTS is open source)
-    tts = CoquiTTS()
-
-    # Set up microphone as input and speaker as output
-    source = MicrophoneSource()
-    sink = SpeakerSink()
-
-    # Create the pipeline
-    pipeline = Pipeline(source=source, llm=llm, stt=stt, tts=tts, sink=sink)
-
-    # Run the pipeline
-    pipeline.run()
+    print("AI After-Hours Voice Agent Prototype")
+    print("This is a placeholder script. To implement the full voice agent, install the required ASR, LLM, and TTS libraries and integrate them here.")
+    while True:
+        user_input = input("User (type 'exit' to quit): ")
+        if user_input.strip().lower() == "exit":
+            print("Goodbye!")
+            break
+        # In a real implementation, you'd send `user_input` to your LLM and return a response.
+        print(f"Agent: You said '{user_input}'. In a real call, the AI would respond appropriately.")
 
 
 if __name__ == "__main__":
